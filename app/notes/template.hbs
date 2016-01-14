@@ -1,0 +1,13 @@
+{{#link-to "newNote" class="btn-floating btn-large waves-effect waves-light red"}}
+  <i class="material-icons">ADD</i>
+  {{!-- <i class="large material-icons">mode_edit</i> --}}
+{{/link-to}}
+<ul>
+{{#each notes as |note|}}
+  <li class="listed-note">
+    {{note.title}}
+  </li>
+{{/each}}
+</ul>
+
+{{outlet}}
