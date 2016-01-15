@@ -1,13 +1,36 @@
-{{#link-to "newNote" class="btn-floating btn-large waves-effect waves-light red"}}
-  <i class="material-icons">ADD</i>
-  {{!-- <i class="large material-icons">mode_edit</i> --}}
-{{/link-to}}
-<ul>
-{{#each notes as |note|}}
-  <li class="listed-note">
-    {{note.title}}
-  </li>
-{{/each}}
-</ul>
+<div class="notes-container">
+  {{#link-to "newNote" class="new-note-button btn-floating btn-large waves-effect waves-light red"}}
+    <i class="material-icons">add</i>
+    {{!-- <i class="large material-icons">mode_edit</i> --}}
+  {{/link-to}}
+  <ul>
+  {{#each notes as |note|}}
+    <li>
+      {{!-- {{#link-to "editNote"}}
+        {{note.title}}
+      {{/link-to}} --}}
+      <span class="listed-note">
+        {{note.title}}
+      </span>
+      <span>
+        {{displayDate}}
+        {{!-- {{note.lastChanged}} --}}
+      </span>
 
-{{outlet}}
+      {{!-- <span>
+        <button
+        type="button"
+        class="close"
+        data-dismiss="modal"
+        aria-label="Close">
+          <span aria-hidden="true">
+            &times;
+          </span>
+        </button>
+      </span> --}}
+    </li>
+  {{/each}}
+  </ul>
+
+  {{outlet}}
+</div>

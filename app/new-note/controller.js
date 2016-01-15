@@ -1,19 +1,28 @@
 import Ember from 'ember';
 
 const NewNoteController = Ember.Controller.extend({
-  noteText: "",
+  noteText: Ember.computed(function() {
+    var noteText = this.get("text") || "";
+    return noteText;
+  }),
 
-  noteTitle: "",
+  noteTitle: Ember.computed(function() {
+    var noteTitle = this.get("title") || "";
+    return noteTitle;
+  }),
+
+  // _dateHelper(dateInMilliseconds) {
+
+  // },
 
   actions: {
     saveNote() {
+
       const newNote = this.store.createRecord("note", {
         title: this.get("noteTitle"),
-        text: this.get("noteText")
+        text: this.get("noteText"),
+        lastChanged: new Date()
       });
-
-    newNote.save()
-
 
       newNote.save();
       this.setProperties({

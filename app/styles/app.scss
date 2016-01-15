@@ -1,2 +1,46 @@
+@import 'components/color';
+
+// Custom color settings go here
+@import 'components/variables';
 @import 'materialize';
 @import 'ember-cli-materialize';
+
+
+.notes-container {
+  padding-left: 5%;
+}
+
+.new-note-button {
+  padding-bottom: 5%;
+}
+
+.listed-note {
+  font-size: 150%;
+  padding-bottom: 10%;
+}
+
+.new-note-container {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.save-button {
+  /*background: teal;*/
+}
+
+.note-title {
+  height: 30%;
+}
+
+.note-text-area {
+  overflow-y: scroll;
+  height: 500px;
+  resize: none;
+  // min-height: 70%;
+  // height: auto;
+  // overflow: auto;
+  /*position: absolute;*/
+  /*min-height: 500%;*/
+}
+
+
