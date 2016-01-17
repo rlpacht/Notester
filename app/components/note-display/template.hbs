@@ -1,0 +1,41 @@
+<div class="note-container">
+  <button class="save-button waves-effect waves-light btn" {{action "saveNote"}}>
+    Save
+  </button>
+
+  {{!-- <button data-target="modal1" class="btn modal-trigger">Modal</button>
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+      <h4>Modal Header</h4>
+      <p>A bunch of text</p>
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div> --}}
+
+  <button class="trash-button btn" {{action "deleteNote"}}>
+    Delete
+  </button>
+
+  {{!-- {{#link-to "notes" class="discard-button waves-effect waves-light btn"}}
+    Discard
+  {{/link-to}} --}}
+
+  {{input
+    value=note.title
+    class="note-title"
+    autofocus="true"
+    placeholder="Title"
+  }}
+
+  {{textarea
+    value=note.text
+    class="note-text-area"
+    cols="50"
+    rows="20"
+    placeholder="Start Typing Here"
+  }}
+</div>
+
+{{yield}}

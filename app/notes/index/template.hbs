@@ -1,0 +1,22 @@
+<div class="notes-container">
+  {{#link-to "notes.new" class="new-note-button btn-floating btn-large waves-effect waves-light red"}}
+    <i class="medium material-icons">mode_edit</i>
+  {{/link-to}}
+
+  <ul>
+  {{#each notes as |note|}}
+    <li class="listed-note">
+      {{#link-to "notes.edit" note}}
+        {{note.title}}
+      {{/link-to}}
+
+      <span>
+        {{moment-format note.lastChanged "MM/DD/YYYY"}}
+      </span>
+
+    </li>
+  {{/each}}
+  </ul>
+
+  {{outlet}}
+</div>

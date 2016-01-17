@@ -8,18 +8,21 @@
 
 .notes-container {
   padding-left: 5%;
+  padding-top: 2%;
 }
 
 .new-note-button {
-  padding-bottom: 5%;
-}
-
-.listed-note {
-  font-size: 150%;
   padding-bottom: 10%;
 }
 
-.new-note-container {
+.listed-note {
+  font-size: 100%;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.note-container {
+  padding-top: 2%;
   padding-left: 5%;
   padding-right: 5%;
 }
