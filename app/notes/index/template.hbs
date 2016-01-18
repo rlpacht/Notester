@@ -3,20 +3,26 @@
     <i class="medium material-icons">mode_edit</i>
   {{/link-to}}
 
-  <ul>
-  {{#each notes as |note|}}
-    <li class="listed-note">
-      {{#link-to "notes.edit" note}}
-        {{note.title}}
-      {{/link-to}}
 
-      <span>
-        {{moment-format note.lastChanged "MM/DD/YYYY"}}
-      </span>
-
-    </li>
-  {{/each}}
-  </ul>
-
-  {{outlet}}
+  <table class="striped centered">
+    <tbody>
+      {{#each notes as |note|}}
+        <tr class="note-row">
+          <td class="listed-note">
+            {{#link-to "notes.edit" note}}
+              {{note.title}}
+            {{/link-to}}
+          </td>
+          <td class="listed-note">
+            {{moment-format note.lastChanged "MM/DD/YYYY"}}
+          </td>
+        </tr>
+      {{else}}
+        <div class="no-notes">
+          You have no notes. Press the red button to start writing!
+        </div>
+      {{/each}}
+    </tbody>
+  </table>
 </div>
+{{outlet}}
