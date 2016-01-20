@@ -23,12 +23,6 @@ module.exports = function(environment) {
       'style-src': "'self' https://fonts.googleapis.com 'unsafe-inline'"
     },
 
-
-    // contentSecurityPolicy: {
-    //   'font-src': "'self' data: fonts.gstatic.com",
-    //   'style-src': "'self' 'unsafe-inline' fonts.googleapis.com"
-    // },
-
     sassOptions: {
       includePaths: ['bower_components/materialize/sass']
     }
