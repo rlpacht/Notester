@@ -5,7 +5,7 @@ module.exports = function(environment) {
     modulePrefix: 'notes-app',
     environment: environment,
     baseURL: '/',
-    locationType: 'auto',
+    locationType: 'hash',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -17,6 +17,12 @@ module.exports = function(environment) {
       // Here you can pass flags/options to your application instance
       // when it is created
     },
+
+    contentSecurityPolicy: {
+      'font-src': "'self' https://fonts.gstatic.com",
+      'style-src': "'self' https://fonts.googleapis.com 'unsafe-inline'"
+    },
+
 
     // contentSecurityPolicy: {
     //   'font-src': "'self' data: fonts.gstatic.com",

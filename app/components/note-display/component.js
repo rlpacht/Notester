@@ -5,14 +5,17 @@ const NoteDisplayComponent = Ember.Component.extend({
 
   actions: {
     saveNote() {
-      const savedNote = this.get('note');
-      savedNote.set('lastChanged', new Date());
+      const savedNote = this.get("note");
+      if (this.get("note.title") === "") {
+        savedNote.set("title" , "Untitled Note");
+      }
+      savedNote.set("lastChanged", new Date());
       savedNote.save();
       this.sendAction("backToAllNotes");
     },
 
     deleteNote() {
-      var note = this.get('note');
+      const note = this.get('note');
       if (note.get("isNew")) {
         note.deleteRecord();
       } else {

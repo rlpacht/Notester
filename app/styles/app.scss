@@ -7,28 +7,30 @@
 
 
 .notes-container {
-  padding-left: 5%;
   padding-top: 2%;
 }
 
 .new-note-button {
-  padding-bottom: 10%;
+  margin-left: 5%;
+  margin-bottom: 8%;
+  height: 100%;
 }
 
 .listed-note {
-  font-size: 100%;
-  padding-top: 5%;
-  padding-bottom: 5%;
+  font-size: 5vw;
+  // padding-top: 5%;
+  // padding-bottom: 5%;
+}
+
+.no-notes {
+  font-size: 150%;
+  padding-left: 5%;
 }
 
 .note-container {
   padding-top: 2%;
   padding-left: 5%;
   padding-right: 5%;
-}
-
-.save-button {
-  /*background: teal;*/
 }
 
 .note-title {
@@ -39,11 +41,6 @@
   overflow-y: scroll;
   height: 500px;
   resize: none;
-  // min-height: 70%;
-  // height: auto;
-  // overflow: auto;
-  /*position: absolute;*/
-  /*min-height: 500%;*/
 }
 
 
