@@ -4,6 +4,7 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'notes-app',
     environment: environment,
+    firebase: 'https://rebeccanotesapp.firebaseio.com/',
     baseURL: '/',
     locationType: 'hash',
     EmberENV: {
@@ -20,7 +21,8 @@ module.exports = function(environment) {
 
     contentSecurityPolicy: {
       'font-src': "'self' https://fonts.gstatic.com",
-      'style-src': "'self' https://fonts.googleapis.com 'unsafe-inline'"
+      'style-src': "'self' https://fonts.googleapis.com 'unsafe-inline'",
+      'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com"
     },
 
     sassOptions: {
