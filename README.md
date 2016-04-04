@@ -1,4 +1,4 @@
-# Notes-app
+# Notester
 
 A simple mobile friendly note taking app built with Ember CLI.
 
